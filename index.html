@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trúc Lam Spa | Đến là khoẻ - Đến là đẹp</title>
+    <meta name="description"
+        content="Trúc Lam Spa cung cấp dịch vụ gội đầu dưỡng sinh, massage body đá nóng, và trị liệu chuyên sâu tại Quận 8, TP HCM.">
+
+    <!-- Tích hợp Tailwind CSS qua CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spa: {
+                            light: '#f0fdfa',
+                            DEFAULT: '#0d9488',
+                            dark: '#0f766e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-spa-light text-gray-800 font-sans antialiased relative">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- Chèn Logo -->
+                <img src="./assets/lam-spa-icon.jpg" alt="Trúc Lam Spa Logo"
+                    class="h-12 object-contain rounded-full shadow-sm">
+                <div>
+                    <h1 class="text-2xl font-bold text-spa-dark tracking-wide leading-none">TRÚC LAM SPA</h1>
+                    <span class="text-xs text-spa italic font-medium">Đến là khoẻ - Đến là đẹp</span>
+                </div>
+            </div>
+            <a href="https://m.me/61552107865259" target="_blank"
+                class="hidden md:inline-block bg-spa text-white px-5 py-2 rounded-full font-medium hover:bg-spa-dark transition shadow-sm">
+                Nhận Tư Vấn
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-spa-dark text-white py-16 px-4 text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Thư Giãn Cơ Thể, Phục Hồi Năng Lượng</h2>
+            <p class="text-lg md:text-xl text-teal-100 mb-8">
+                Tận hưởng không gian bình yên và các liệu trình trị liệu chuyên sâu, gội đầu dưỡng sinh chuẩn đông y
+                ngay giữa lòng Quận 8.
+            </p>
+            <a href="https://m.me/61552107865259" target="_blank"
+                class="inline-block bg-white text-spa-dark px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:scale-105 transition-transform">
+                Đặt Lịch Ngay
+            </a>
+        </div>
+    </section>
+
+    <!-- Dịch vụ trọng tâm (Đã cập nhật theo Menu) -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-spa-dark mb-4">Bảng Giá Dịch Vụ</h3>
+            <div class="w-16 h-1 bg-spa mx-auto rounded"></div>
+        </div>
+
+        <!-- 1. Gội Đầu Dưỡng Sinh -->
+        <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2"><span
+                class="text-spa text-3xl">🌿</span> Gội Đầu Dưỡng Sinh</h4>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+
+            <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-spa">
+                <h5 class="text-lg font-bold text-gray-900 mb-1">Gội Đầu Thư Giãn</h5>
+                <p class="text-sm text-gray-500 mb-3">30 Phút</p>
+                <div class="text-xl font-bold text-spa mb-4">69.000đ</div>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Rửa mặt, đắp mặt nạ</li>
+                    <li>• Gội đầu sạch 2 lần</li>
+                    <li>• Ủ tóc collagen, massage đầu</li>
+                    <li>• Sấy tóc, xịt dưỡng</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-spa">
+                <h5 class="text-lg font-bold text-gray-900 mb-1">Thư Giãn + Massage Mặt</h5>
+                <p class="text-sm text-gray-500 mb-3">40 Phút</p>
+                <div class="text-xl font-bold text-spa mb-4">100.000đ</div>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Rửa mặt, massage mặt</li>
+                    <li>• Đắp mặt nạ</li>
+                    <li>• Gội đầu sạch 2 lần</li>
+                    <li>• Ủ tóc collagen, massage đầu</li>
+                    <li>• Sấy tóc, xịt dưỡng</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-spa bg-teal-50 relative">
+                <div class="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">Hot
+                </div>
+                <h5 class="text-lg font-bold text-gray-900 mb-1">Dưỡng Sinh Thư Giãn</h5>
+                <p class="text-sm text-gray-500 mb-3">60 Phút</p>
+                <div class="text-xl font-bold text-spa mb-4">169.000đ</div>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Chườm ấm thảo mộc</li>
+                    <li>• Khai hương khứu giác</li>
+                    <li>• Massage huyệt vùng đầu, tay, vai, cổ gáy</li>
+                    <li>• Tẩy trang, rửa mặt, đắp nạ</li>
+                    <li>• Gội đầu 2 lần, ủ tóc thảo dược</li>
+                    <li>• Massage đả thông kinh lạc</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-spa">
+                <h5 class="text-lg font-bold text-gray-900 mb-1">Dưỡng Sinh Thư Giãn</h5>
+                <p class="text-sm text-gray-500 mb-3">90 Phút</p>
+                <div class="text-xl font-bold text-spa mb-4">269.000đ</div>
+                <ul class="text-sm text-gray-600 space-y-1">
+                    <li>• Úp massage tay, vai, cổ gáy 20'</li>
+                    <li>• Chườm ấm thảo mộc, khai hương</li>
+                    <li>• Massage huyệt vùng đầu</li>
+                    <li>• Đắp nạ ngũ hoa</li>
+                    <li>• Ủ nước thảo mộc kích mọc tóc</li>
+                    <li>• Gội sạch 2 lần, ủ tóc collagen</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2. Massage Trị Liệu -->
+        <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2"><span
+                class="text-spa text-3xl">💆‍♀️</span> Massage & Trị Liệu</h4>
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <!-- Cột Trị Liệu -->
+            <div class="bg-white p-6 rounded-2xl shadow-md">
+                <h5 class="text-xl font-bold text-spa-dark mb-4 border-b pb-2">Trị Liệu Chuyên Sâu</h5>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-gray-800">Đau Mỏi Vai Gáy / Mất Ngủ / Tê Tay (60')</p>
+                            <p class="text-xs text-red-500 font-medium">Tặng đắp thuốc đông y</p>
+                        </div>
+                        <span class="font-bold text-spa">349.000đ</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-gray-800">Trị Liệu Đau Thần Kinh Tọa</p>
+                            <p class="text-xs text-red-500 font-medium">Tặng đắp thuốc đông y</p>
+                        </div>
+                        <span class="font-bold text-spa">349.000đ</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-gray-800">Đau Thắt Lưng, Khớp Gối, Suy Giãn Tĩnh Mạch</p>
+                            <p class="text-xs text-red-500 font-medium">Đắp thuốc đông y</p>
+                        </div>
+                        <span class="font-bold text-spa">349.000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột Massage Body -->
+            <div class="bg-white p-6 rounded-2xl shadow-md">
+                <h5 class="text-xl font-bold text-spa-dark mb-4 border-b pb-2">Massage Body (Đá Nóng)</h5>
+                <div class="space-y-5">
+                    <div class="flex justify-between items-center">
+                        <p class="font-bold text-gray-800">Gói 60 Phút</p>
+                        <span class="font-bold text-spa">299.000đ</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="font-bold text-gray-800">Gói 90 Phút</p>
+                        <span class="font-bold text-spa">400.000đ</span>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-gray-800">Gói 120 Phút</p>
+                            <p class="text-xs text-red-500 font-medium">Tặng gội đầu</p>
+                        </div>
+                        <span class="font-bold text-spa">500.000đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Combo & Triệt Lông -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2"><span
+                        class="text-spa text-3xl">✨</span> Combo Massage</h4>
+                <div class="bg-white p-6 rounded-2xl shadow-md space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                        <p class="font-bold text-gray-800">Massage Body (60') + Gội Đầu</p>
+                        <span class="font-bold text-spa">349.000đ</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                        <p class="font-bold text-gray-800">Massage Body (90') + Gội Đầu</p>
+                        <span class="font-bold text-spa">449.000đ</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p class="font-bold text-gray-800">Trị Liệu Vai, Cổ, Gáy + Gội Đầu</p>
+                        <span class="font-bold text-spa">399.000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2"><span
+                        class="text-spa text-3xl">🌸</span> Bảng Giá Triệt Lông</h4>
+                <div class="bg-white p-6 rounded-2xl shadow-md overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="text-gray-500 border-b-2 border-spa-light">
+                                <th class="py-2 font-medium">Vùng Triệt</th>
+                                <th class="py-2 font-medium text-center">1 Lần</th>
+                                <th class="py-2 font-medium text-right">10 Lần</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="border-b border-gray-50">
+                                <td class="py-2 font-medium text-gray-800">Rìa mép</td>
+                                <td class="py-2 text-center text-gray-500">-</td>
+                                <td class="py-2 text-right text-spa font-bold">500.000đ</td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-2 font-medium text-gray-800">Râu quai nón</td>
+                                <td class="py-2 text-center text-gray-500">-</td>
+                                <td class="py-2 text-right text-spa font-bold">1.000.000đ</td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-2 font-medium text-gray-800">Mặt</td>
+                                <td class="py-2 text-center text-gray-500">-</td>
+                                <td class="py-2 text-right text-spa font-bold">1.000.000đ</td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-2 font-medium text-gray-800">Nách</td>
+                                <td class="py-2 text-center">100.000đ</td>
+                                <td class="py-2 text-right text-spa font-bold">500.000đ</td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-2 font-medium text-gray-800">Full Tay</td>
+                                <td class="py-2 text-center">150.000đ</td>
+                                <td class="py-2 text-right text-spa font-bold">1.000.000đ</td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-2 font-medium text-gray-800">Lông Chân</td>
+                                <td class="py-2 text-center">200.000đ</td>
+                                <td class="py-2 text-right text-spa font-bold">1.500.000đ</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 font-medium text-gray-800">Bikini</td>
+                                <td class="py-2 text-center">200.000đ</td>
+                                <td class="py-2 text-right text-spa font-bold">1.300.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Khu vực chèn Ảnh/Video -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h3 class="text-3xl font-bold text-spa-dark mb-4">Không Gian & Trải Nghiệm</h3>
+            <p class="text-gray-600 mb-8">Nơi gác lại những ồn ào của nhịp sống đô thị.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="./assets/goi-dau-duong-sinh-3.png" alt="Gội đầu dưỡng sinh"
+                    class="w-full h-48 object-cover rounded-lg shadow-sm">
+                <img src="./assets/tri-lieu-co-vai-gay-3.png" alt="Massage trị liệu"
+                    class="w-full h-48 object-cover rounded-lg shadow-sm">
+                <img src="./assets/anh-khong-gian.jpg" alt="Gội đầu dưỡng sinh"
+                    class="w-full h-48 object-cover rounded-lg shadow-sm">
+                <img src="./assets/anh-khong-gian-3.jpg" alt="Gội đầu dưỡng sinh"
+                    class="w-full h-48 object-cover rounded-lg shadow-sm">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Thông tin liên hệ -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="./assets/lam-spa-icon.jpg" alt="Trúc Lam Spa Logo"
+                        class="h-10 opacity-90 rounded-full bg-white p-1">
+                    <h4 class="text-2xl font-bold text-white">Trúc Lam Spa</h4>
+                </div>
+                <p class="mb-2"><strong>📍 Địa chỉ:</strong> 38 Tạ Quang Bửu, Chánh Hưng (Phường 2 cũ), Quận 8, TP HCM.
+                </p>
+                <p class="mb-4"><strong>📞 Hotline:</strong> <a href="tel:0937967566"
+                        class="text-spa-light hover:text-white transition">093 796 75 66</a></p>
+                <p class="text-sm text-gray-500 mt-6">© 2026 Trúc Lam Spa. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="mb-4 text-lg">Liên hệ đặt lịch trực tiếp qua Fanpage để nhận ưu đãi và tư vấn chi tiết nhất!
+                </p>
+                <a href="https://m.me/61552107865259" target="_blank"
+                    class="inline-block bg-blue-600 text-white text-center px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg w-full md:w-auto">
+                    💬 Inbox Fanpage Ngay
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button (Messenger) -->
+    <a href="https://m.me/61552107865259" target="_blank"
+        class="fixed bottom-6 right-6 bg-blue-500 text-white p-4 rounded-full shadow-2xl hover:bg-blue-600 hover:scale-110 transition-transform z-50 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M12 2C6.477 2 2 6.145 2 11.259c0 2.915 1.528 5.485 3.921 7.151v4.331l3.585-1.956c.795.222 1.631.341 2.494.341 5.523 0 10-4.145 10-9.259C22 6.145 17.523 2 12 2zm1.085 12.353l-2.613-2.793-5.097 2.793 5.617-5.967 2.65 2.792 5.061-2.792-5.618 5.967z" />
+        </svg>
+    </a>
+
+</body>
+
+</html>
