@@ -13,9 +13,71 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trúc Lam Spa | Đến là khoẻ - Đến là đẹp</title>
+    <title>Trúc Lam Spa Quận 8 | Gội Đầu Dưỡng Sinh & Massage Trị Liệu TP.HCM</title>
     <meta name="description"
-        content="Trúc Lam Spa cung cấp dịch vụ gội đầu dưỡng sinh, massage body đá nóng, và trị liệu chuyên sâu tại Quận 8, TP HCM.">
+        content="Trúc Lam Spa - 38 Tạ Quang Bửu, Quận 8, TP.HCM. Gội đầu dưỡng sinh từ 69K, massage trị liệu cổ vai gáy 199K (Giờ Vàng). Đặt lịch ngay: 093 796 75 66.">
+    <meta name="keywords" content="spa quận 8, gội đầu dưỡng sinh quận 8, massage trị liệu quận 8, trị liệu cổ vai gáy hcm, spa hcm, trúc lam spa">
+
+    <!-- Schema.org LocalBusiness (B4) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DaySpa",
+      "name": "Trúc Lam Spa",
+      "description": "Gội đầu dưỡng sinh, massage trị liệu chuyên sâu, triệt lông tại Quận 8 TP.HCM. Đến là khoẻ - Đến là đẹp.",
+      "url": "https://truclamvongcat.github.io/lam_spa",
+      "telephone": "+84937967566",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "38 Tạ Quang Bửu, Chánh Hưng (Phường 2 cũ)",
+        "addressLocality": "Quận 8",
+        "addressRegion": "Hồ Chí Minh",
+        "postalCode": "700000",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.7394,
+        "longitude": 106.6633
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      "priceRange": "69.000đ – 500.000đ",
+      "image": "https://truclamvongcat.github.io/lam_spa/assets/lam-spa-icon.jpg",
+      "sameAs": [
+        "https://www.tiktok.com/@truclamchuyencovaigay",
+        "https://www.facebook.com/61552107865259"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dịch vụ Trúc Lam Spa",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Gội Đầu Dưỡng Sinh Thư Giãn",
+            "price": "69000",
+            "priceCurrency": "VND"
+          },
+          {
+            "@type": "Offer",
+            "name": "Trị Liệu Cổ Vai Gáy 60 phút (Giờ Vàng)",
+            "price": "199000",
+            "priceCurrency": "VND"
+          },
+          {
+            "@type": "Offer",
+            "name": "Massage Body Đá Nóng 60 phút",
+            "price": "299000",
+            "priceCurrency": "VND"
+          }
+        ]
+      }
+    }
+    </script>
 
     <!-- Tích hợp Tailwind CSS qua CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -58,6 +120,10 @@
                     <span class="text-xs text-spa italic font-medium">Đến là khoẻ - Đến là đẹp</span>
                 </div>
             </div>
+            <a href="tel:0937967566"
+                class="md:hidden bg-spa text-white px-4 py-2 rounded-full font-medium text-sm hover:bg-spa-dark transition shadow-sm">
+                📞 Gọi Ngay
+            </a>
             <a href="https://m.me/61552107865259" target="_blank"
                 class="hidden md:inline-block bg-spa text-white px-5 py-2 rounded-full font-medium hover:bg-spa-dark transition shadow-sm">
                 Nhận Tư Vấn
@@ -370,6 +436,64 @@
             </svg>
         </a>
     </div>
+
+    <!-- GA4 Event Tracking (A1) -->
+    <script>
+    // === CTA Click Tracking ===
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href]');
+      if (!link) return;
+      var href = link.href;
+      var text = link.textContent.trim().substring(0, 50);
+
+      if (href.indexOf('m.me/') !== -1) {
+        gtag('event', 'cta_click', {
+          event_category: 'conversion',
+          event_label: 'messenger',
+          link_text: text
+        });
+      } else if (href.indexOf('zalo.me/') !== -1) {
+        gtag('event', 'cta_click', {
+          event_category: 'conversion',
+          event_label: 'zalo',
+          link_text: text
+        });
+      } else if (href.indexOf('tel:') === 0) {
+        gtag('event', 'cta_click', {
+          event_category: 'conversion',
+          event_label: 'phone_call',
+          link_text: text
+        });
+      } else if (href.indexOf('tiktok.com') !== -1) {
+        gtag('event', 'cta_click', {
+          event_category: 'social',
+          event_label: 'tiktok'
+        });
+      }
+    });
+
+    // === Scroll Depth Tracking ===
+    var scrollMilestones = { 25: false, 50: false, 75: false };
+    window.addEventListener('scroll', function() {
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      var percent = Math.round((window.scrollY / docHeight) * 100);
+      [25, 50, 75].forEach(function(m) {
+        if (percent >= m && !scrollMilestones[m]) {
+          scrollMilestones[m] = true;
+          gtag('event', 'scroll_depth', { percent_scrolled: m });
+        }
+      });
+    });
+
+    // === Time on Page Tracking ===
+    var timeMarkers = [30, 60, 120];
+    timeMarkers.forEach(function(sec) {
+      setTimeout(function() {
+        gtag('event', 'time_on_page', { seconds: sec });
+      }, sec * 1000);
+    });
+    </script>
 
 </body>
 
